@@ -76,215 +76,218 @@ $max-small: 475px;
     box-sizing: border-box;
 }
 
-.main {
-    width: 100%;
-    margin: 0 auto;
-    text-align: center;
-    display: flex;
-    align-items: stretch;
-    justify-content: center;
-
-    @media screen and (max-width: $max-large) {
-        display: inline;
-      }
-
-    &__item {
-
-        display: inline-block;
-
+body {
+    padding-bottom: 50px;
+    .main {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+        display: flex;
+        align-items: stretch;
+        justify-content: center;
+    
         @media screen and (max-width: $max-large) {
-            display: inline-grid;
-        }
-
-
-        &__title {
-            @include title;
-        }
-
-        &__product {
-
-            &__image {
-                @include block;
-                width: 1000px;;
-                height: auto;
-
-
-                img {
-                    max-width: 200px;
-                    height: auto;
-                    align-self: center;
-                    @media screen and (max-width: $max-medium) {
-                    max-width: 400px;
-                    }
-                }
-
-                &__name {
-                    @include product-name;                    
-                }
-
-                &__price {
-                    font-family: $font-regular;
-                    text-align: left;
-                    margin: 5px 20px;
-                    padding-top: 50px;
-                    font-size: 18px;
-                    @media screen and (max-width: $max-medium) {
-                        font-size: 28px;
-                    }
-                    @media screen and (max-width: $max-small) {
-                        font-size: 46px;
-                    }
-
-                }
-
-                &__paymentConditions {
-                    font-family: $font-regular;
-                    margin: 0 20px;
-                    text-align: left;
-                    font-size: 16px;
-                    @media screen and (max-width: $max-medium) {
-                        font-size: 26px;
-                    }
-                    @media screen and (max-width: $max-small) {
-                        font-size: 44px;
-                    }
-
-                }
-
-                &:hover {
-                    cursor: pointer;
-                    background: rgb(255,255,255);
-                    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(221,221,221,0.4738270308123249) 100%);
-
-                }
-
+            display: inline;
+          }
+    
+        &__item {
+    
+            display: inline-block;
+    
+            @media screen and (max-width: $max-large) {
+                display: inline-grid;
             }
-        }
-
-    }
-
-    &__interess {
-
-        display: inline-block;
-
-        @media screen and (max-width: $max-large) {
-            display: inline-grid;
-        }
-
-        &__title {
-            @include title;
-        }
-
-        &__list{
-
-            &__image {
-                @include block;
-                position: relative;
-                height: auto;
-
-                img {
-                    max-width: 200px;
+    
+    
+            &__title {
+                @include title;
+            }
+    
+            &__product {
+    
+                &__image {
+                    @include block;
+                    width: 1000px;;
                     height: auto;
-                    align-self: center;
+    
+    
+                    img {
+                        max-width: 200px;
+                        height: auto;
+                        align-self: center;
+                        @media screen and (max-width: $max-medium) {
+                        max-width: 400px;
+                        }
+                    }
+    
+                    &__name {
+                        @include product-name;                    
+                    }
+    
+                    &__price {
+                        font-family: $font-regular;
+                        text-align: left;
+                        margin: 5px 20px;
+                        padding-top: 50px;
+                        font-size: 18px;
+                        @media screen and (max-width: $max-medium) {
+                            font-size: 28px;
+                        }
+                        @media screen and (max-width: $max-small) {
+                            font-size: 46px;
+                        }
+    
+                    }
+    
+                    &__paymentConditions {
+                        font-family: $font-regular;
+                        margin: 0 20px;
+                        text-align: left;
+                        font-size: 16px;
+                        @media screen and (max-width: $max-medium) {
+                            font-size: 26px;
+                        }
+                        @media screen and (max-width: $max-small) {
+                            font-size: 44px;
+                        }
+    
+                    }
+    
+                    &:hover {
+                        cursor: pointer;
+                        background: rgb(255,255,255);
+                        background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(221,221,221,0.4738270308123249) 100%);
+    
+                    }
+    
                 }
-
-                &__name {
-                    @include product-name;
-                    
-                }
-
-                &__price {
-                    font-family: $font-regular;
-                    text-align: left;
-                    margin: 5px 20px;
-                    padding-top: 50px;
-                    font-size: 18px;
-                    @media screen and (max-width: $max-medium) {
-                        font-size: 28px;
+            }
+    
+        }
+    
+        &__interess {
+    
+            display: inline-block;
+    
+            @media screen and (max-width: $max-large) {
+                display: inline-grid;
+            }
+    
+            &__title {
+                @include title;
+            }
+    
+            &__list{
+    
+                &__image {
+                    @include block;
+                    position: relative;
+                    height: auto;
+    
+                    img {
+                        max-width: 200px;
+                        height: auto;
+                        align-self: center;
                     }
-                    @media screen and (max-width: $max-small) {
-                        font-size: 46px;
+    
+                    &__name {
+                        @include product-name;
+                        
                     }
-                }
-
-                &__paymentConditions {
-                    font-family: $font-regular;
-                    margin: 0 20px;
-                    text-align: left;
-                    font-size: 16px;
-                    @media screen and (max-width: $max-medium) {
-                        font-size: 26px;
+    
+                    &__price {
+                        font-family: $font-regular;
+                        text-align: left;
+                        margin: 5px 20px;
+                        padding-top: 50px;
+                        font-size: 18px;
+                        @media screen and (max-width: $max-medium) {
+                            font-size: 28px;
+                        }
+                        @media screen and (max-width: $max-small) {
+                            font-size: 46px;
+                        }
                     }
-                    @media screen and (max-width: $max-small) {
-                        font-size: 44px;
+    
+                    &__paymentConditions {
+                        font-family: $font-regular;
+                        margin: 0 20px;
+                        text-align: left;
+                        font-size: 16px;
+                        @media screen and (max-width: $max-medium) {
+                            font-size: 26px;
+                        }
+                        @media screen and (max-width: $max-small) {
+                            font-size: 44px;
+                        }
                     }
-                }
-
-                &__btn {
-                    display: none;
-                    background-color: white;
-                    border: $border;
-                    font-family: $font-condensed;
-                    padding: 20px;
-                    width: auto;
-                    margin: 0 auto;
-                    margin-top: 30px;
-                    font-size: 22px;
-                    bottom: 20px;
-                    align-self: center;
-                    color: $light-gray;
-
-                    @media screen and (max-width: $max-medium) {
-                        font-size: 38px;
+    
+                    &__btn {
+                        display: none;
+                        background-color: white;
+                        border: $border;
+                        font-family: $font-condensed;
+                        padding: 20px;
+                        width: auto;
+                        margin: 0 auto;
+                        margin-top: 30px;
+                        font-size: 22px;
+                        bottom: 20px;
+                        align-self: center;
+                        color: $light-gray;
+    
+                        @media screen and (max-width: $max-medium) {
+                            font-size: 38px;
+                        }
+                        @media screen and (max-width: $max-small) {
+                            font-size: 50px;
+                        }
+    
+                        @media screen and (max-width: $min-large) {
+                            display: block;
+                        }
+    
+                        i {
+                            margin-left: 10px;
+                        }
+    
+                        &:hover, &:active {
+                            cursor: pointer;
+                            border-left: 15px solid orange;
+                            padding-left: 6px;
+                        }
+    
+                        &:hover > i, &:active {
+                            color: orange;
+                        }
+    
                     }
-                    @media screen and (max-width: $max-small) {
-                        font-size: 50px;
-                    }
-
-                    @media screen and (max-width: $min-large) {
+    
+                    &:hover > button {
                         display: block;
                     }
-
-                    i {
-                        margin-left: 10px;
-                    }
-
-                    &:hover, &:active {
+    
+                    &:hover {
+                        height: auto;
                         cursor: pointer;
-                        border-left: 15px solid orange;
-                        padding-left: 6px;
+                        background: rgb(255,255,255);
+                        background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(221,221,221,0.4738270308123249) 100%);
+    
                     }
-
-                    &:hover > i, &:active {
-                        color: orange;
-                    }
-
                 }
-
-                &:hover > button {
-                    display: block;
-                }
-
-                &:hover {
-                    height: auto;
-                    cursor: pointer;
-                    background: rgb(255,255,255);
-                    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(221,221,221,0.4738270308123249) 100%);
-
+    
+                .swiper-pagination {
+                    position: initial;
                 }
             }
-
-            .swiper-pagination {
-                position: initial;
-            }
+    
+    
         }
-
-
+    
     }
-
-}
-
-.swiper-container {
-    width: 1000px;;
-    height: auto;
+    
+    .swiper-container {
+        width: 1000px;;
+        height: auto;
+    }
 }
