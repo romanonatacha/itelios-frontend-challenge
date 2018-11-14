@@ -6,24 +6,70 @@ $regular: 400;
 $bold: 700;
 $light-gray: rgb(100, 100, 100);
 $dark-gray: rgb(42, 42, 42);
+$border: 1px solid rgb(224, 224, 224);
+$max-large: 1240px;
+$min-large: 1239px;
+$max-medium: 750px;
+$max-small: 475px;
 
 
-
-// mixin
+// mixins
 
 @mixin title {
     font-family: $font-condensed;
     font-weight: $bold;
     color: $light-gray;
     text-align: left;
+    padding-left: 30px;
+
+    @media screen and (max-width: $max-medium) {
+        font-size: 50px;
+    }
+
+    @media screen and (max-width: $max-small) {
+        font-size: 58px;
+    }
 }
 
-@mixin border {
+@mixin block {
+    display: flex;
+    flex-direction: column;
+    border: $border;
+    padding: 20px;
+    text-align: center;
     height: 400px;
-    display: inline-block;
-    border: 1px solid $light-gray;
-    width: 400px;
-    margin: 0 -3px;
+    color: $light-gray;
+
+    @media screen and (min-width: $min-large) {
+        max-width: 350px;
+        display: -ms-inline-grid;
+    }
+
+    @media screen and (max-width: $max-medium) {
+        padding: 40px;
+    }
+}
+
+@mixin product-name {
+    display: -webkit-box;
+    height: 65px;
+    font-size: 18px;
+    line-height: 1.3;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0 20px;
+    font-family: $font-regular;
+    @media screen and (max-width: $max-medium) {
+        height: 68px;
+        font-size: 26px;
+    }
+
+    @media screen and (max-width: $max-small) {
+        height: 106px;
+        font-size: 40px;
+    }
 }
 
 * {
@@ -34,32 +80,211 @@ $dark-gray: rgb(42, 42, 42);
     width: 100%;
     margin: 0 auto;
     text-align: center;
+    display: flex;
+    align-items: stretch;
+    justify-content: center;
+
+    @media screen and (max-width: $max-large) {
+        display: inline;
+      }
 
     &__item {
 
         display: inline-block;
 
+        @media screen and (max-width: $max-large) {
+            display: inline-grid;
+        }
+
+
         &__title {
             @include title;
         }
 
-        &__image {
-            @include border;
+        &__product {
+
+            &__image {
+                @include block;
+                width: 1000px;;
+                height: auto;
+
+
+                img {
+                    max-width: 200px;
+                    height: auto;
+                    align-self: center;
+                    @media screen and (max-width: $max-medium) {
+                    max-width: 400px;
+                    }
+                }
+
+                &__name {
+                    @include product-name;                    
+                }
+
+                &__price {
+                    font-family: $font-regular;
+                    text-align: left;
+                    margin: 5px 20px;
+                    padding-top: 50px;
+                    font-size: 18px;
+                    @media screen and (max-width: $max-medium) {
+                        font-size: 28px;
+                    }
+                    @media screen and (max-width: $max-small) {
+                        font-size: 46px;
+                    }
+
+                }
+
+                &__paymentConditions {
+                    font-family: $font-regular;
+                    margin: 0 20px;
+                    text-align: left;
+                    font-size: 16px;
+                    @media screen and (max-width: $max-medium) {
+                        font-size: 26px;
+                    }
+                    @media screen and (max-width: $max-small) {
+                        font-size: 44px;
+                    }
+
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    background: rgb(255,255,255);
+                    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(221,221,221,0.4738270308123249) 100%);
+
+                }
+
+            }
         }
+
     }
 
     &__interess {
 
         display: inline-block;
 
+        @media screen and (max-width: $max-large) {
+            display: inline-grid;
+        }
 
         &__title {
             @include title;
         }
 
-        &__image {
-            @include border;
+        &__list{
+
+            &__image {
+                @include block;
+                position: relative;
+                height: auto;
+
+                img {
+                    max-width: 200px;
+                    height: auto;
+                    align-self: center;
+                }
+
+                &__name {
+                    @include product-name;
+                    
+                }
+
+                &__price {
+                    font-family: $font-regular;
+                    text-align: left;
+                    margin: 5px 20px;
+                    padding-top: 50px;
+                    font-size: 18px;
+                    @media screen and (max-width: $max-medium) {
+                        font-size: 28px;
+                    }
+                    @media screen and (max-width: $max-small) {
+                        font-size: 46px;
+                    }
+                }
+
+                &__paymentConditions {
+                    font-family: $font-regular;
+                    margin: 0 20px;
+                    text-align: left;
+                    font-size: 16px;
+                    @media screen and (max-width: $max-medium) {
+                        font-size: 26px;
+                    }
+                    @media screen and (max-width: $max-small) {
+                        font-size: 44px;
+                    }
+                }
+
+                &__btn {
+                    display: none;
+                    background-color: white;
+                    border: $border;
+                    font-family: $font-condensed;
+                    padding: 20px;
+                    width: auto;
+                    margin: 0 auto;
+                    margin-top: 30px;
+                    font-size: 22px;
+                    bottom: 20px;
+                    align-self: center;
+                    color: $light-gray;
+
+                    @media screen and (max-width: $max-medium) {
+                        font-size: 38px;
+                    }
+                    @media screen and (max-width: $max-small) {
+                        font-size: 50px;
+                    }
+
+                    @media screen and (max-width: $min-large) {
+                        display: block;
+                    }
+
+                    i {
+                        margin-left: 10px;
+                    }
+
+                    &:hover, &:active {
+                        cursor: pointer;
+                        border-left: 15px solid orange;
+                        padding-left: 6px;
+                    }
+
+                    &:hover > i, &:active {
+                        color: orange;
+                    }
+
+                }
+
+                &:hover > button {
+                    display: block;
+                }
+
+                &:hover {
+                    height: auto;
+                    cursor: pointer;
+                    background: rgb(255,255,255);
+                    background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(221,221,221,0.4738270308123249) 100%);
+
+                }
+            }
+
+            .swiper-pagination {
+                position: initial;
+            }
         }
+
+
     }
 
+}
+
+.swiper-container {
+    width: 1000px;;
+    height: auto;
 }
