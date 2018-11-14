@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"> </script>
-
+    <link rel="stylesheet" href="dist/css/swiper.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:400,700" rel="stylesheet">
     <link rel="stylesheet" href="dist/css/styles.css">
@@ -19,16 +19,22 @@
     <main class="main">
         <div class="main__item">
             <h2 class="main__item__title">Você visitou:</h2>
-            <div class="main__item__product"></div>
+            <div class="main__item__product">
+            </div>
         </div>
 
         <div class="main__interess">
             <h2 class="main__interess__title">e talvez se interesse por:</h2>
-            <div class="main__interess__list"></div>
+            <div class="main__interess__list swiper-container">
+                <div class="swiper-wrapper">
+                </div>
+                <div class='swiper-pagination'></div>
+            </div>
         </div>
     </main>
 
     <script src="dist/js/app.js"></script>
+    <script src="dist/js/swiper.js"></script>
 </body>
 
 </html>
