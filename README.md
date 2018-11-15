@@ -1,39 +1,54 @@
 ![Itelios](http://www.itelios.com.br/images/logo_itelios_orange@2x.png)
 
-# Itelios Frontend Challenge
+Itelios Front-End Challenge
+===============================
 
-Bem-vindo ao desafio de admissão de front-end da Itelios! O que preparamos para este desafio é um pedacinho do que você irá fazer aqui na Itelios, caso seja admitido.
+## Description
 
-O objetivo do desafio é simples: Consumir uma json via xhttp e, com o resultado dele, montar um widget de prateleira de cross-sell. Na resposta deste request você receberá uma lista de produtos. Esta lista servirá para montar um pequeno carrossel de produtos. 
+Build a webpage with a cross-sell widget, reading the data of a json file via XMLHttpRequest and rendering a carousel of products.
 
-## Design
+I build the styles with SASS, using Gulp.js to transpile into CSS.
+To read the JSON file I used pure JavaScript via XMLHttpRequest.
+To build the cross-sell carousel I used the Swiper plugin, and to set the pagination and speed I used jQuery.
 
-- A prateleira apresentada deve seguir o [seguinte design](desafio-front-end-itelios.jpg)
-- Baseado neste layout, faça uma adaptação responsiva para celulares.
+## View the website
 
-## Como realizar o teste
+https://romanonatacha.github.io/restaurant-reviews
 
-- Faça um fork deste repositório em seu GitHub
-- Adicione ao Readme uma descrição de como executar seu projeto
-- Descreva as funcionalidades do seu desafio, venda seu peixe! Por exemplo, se fez a prateleira com javascript puro, porém utilizou uma biblioteca para o carrossel, deixe isso no Readme. Se usou ES6 com um transpiler, conte isso pra gente. 
-- Não há um limite de tempo, porém consideramos ideal não gastar mais que 8h neste desafio
-- Faça commits parciais, para que possamos acompanhar o seu desenvolvimento.
-- Em caso de dúvidas, entre em contato com flora.braz@itelios.com
+## Run the Application localy
 
-## Dicas
- 
-- O ícone do botão é o add-shopping-plus, do Material Design. https://material.io/icons/
-- A fontes utilizadas são Roboto Condensed Bold (títulos), Roboto Regular (texto corrido) e Roboto Bold (preço e preço parcelado). 
-- We **<3** Vanilla Javascript. Tente executar este teste usando javascript puro. Só utilize bibliotecas como último recurso.
-- We **<3** CSS responsivo, organizado, modular e feito com pré-processadores. Sinta-se livre para usar a arquitetura CSS que achar mais adequada. 
-- Trabalhamos com clientes perfeccionistas, portanto tenha atenção com espaçamentos, tamanhos e estilos de fonte. 
+Clone this repository
 
-## Critérios de avaliação
+```
+git clone https://github.com/romanonatacha/itelios-frontend-challenge.git
+```
 
-- Alcançar os objetivos propostos
-- Qualidade de código
-- Commits parciais, mostrando a linha de desenvolvimento
-- Boa descrição das funcionalidades do desafio
-- Não utilização de bibliotecas ou frameworks
-- Fidelidade ao design proposto
-- Adaptação mobile
+### Installing
+
+Inside the project directory run npm install
+
+```
+npm install
+```
+
+### Run the application
+
+Start the application
+
+```
+npm start
+```
+
+* With your server running, visit the site: `http://localhost:8000`.
+
+## Build With
+
+* [Normalize.css](https://necolas.github.io/normalize.css/)
+* [SASS](https://sass-lang.com/)
+* [Gulp.js](https://gulpjs.com/)
+* [Swiper](https://idangero.us/swiper/)
+* [jQuery](https://jquery.com/)
+
+ ## Authors
+
+* **Natacha Romano** - [GitHub Account](https://github.com/romanonatacha)
