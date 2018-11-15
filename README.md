@@ -11,9 +11,6 @@ I build the styles with SASS, using Gulp.js to transpile into CSS.
 To read the JSON file I used pure JavaScript via XMLHttpRequest.
 To build the cross-sell carousel I used the Swiper plugin, and to set the pagination and speed I used jQuery.
 
-## View the website
-
-https://romanonatacha.github.io/restaurant-reviews
 
 ## Run the Application localy
 
