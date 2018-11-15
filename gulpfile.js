@@ -1,9 +1,10 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var babel = require('gulp-babel');
-var serve = require('gulp-serve');
 var browserSync = require('browser-sync').create();
 var connect = require('gulp-connect');
+var deploy = require('gulp-gh-pages');
+
  
 gulp.task('webserver', function() {
   connect.server();
@@ -39,3 +40,11 @@ gulp.task('copy-html', function () {
     gulp.src('index.html')
         .pipe(gulp.dest('dist'));
 });
+
+/**
+ * Push build to gh-pages
+ */
+gulp.task('deploy', function () {
+    return gulp.src("./dist/**/*")
+      .pipe(deploy())
+  });
