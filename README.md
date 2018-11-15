@@ -39,7 +39,7 @@ Start the application
 npm start
 ```
 
-* With your server running, visit the site: [http://localhost:8000].
+* With your server running, visit the site: http://localhost:8080
 
 ## Build With
 
