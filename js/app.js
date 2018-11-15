@@ -1,5 +1,7 @@
+// get the json file
 $.getJSON("./products.json", function (data) {
 
+  // reads the json file and render the html with the data for the main item product
   var mainProduct = data[0].data.item;
   var mainProductTemplate = "<div class='main__item__product__image'> \
     <img src='"+ mainProduct.imageName + "'> \
@@ -10,8 +12,12 @@ $.getJSON("./products.json", function (data) {
   $('.main__item__product').html(mainProductTemplate);
 
 
+  // reads the json file and render the html with the data for the recommentation products
+
   var products = data[0].data.recommendation;
   var recommendationList = '';
+
+  // loops through the recommendation array to render a list
 
   for (var i = 0; i < products.length; i++) {
     var product = products[i];
@@ -21,14 +27,14 @@ $.getJSON("./products.json", function (data) {
        <p class='main__interess__list__image__price'>Por: <strong>" + product.price + "</strong></p> \
        <p class='main__interess__list__image__paymentConditions'>" + product.productInfo.paymentConditions + "</p> \
        <button class='main__interess__list__image__btn'>adicionar ao carrinho<i class='material-icons'>add_shopping_cart</i></button></div>";
-
   }
 
+  // render all list of the array
 
   $('.swiper-wrapper').html(recommendationList);
 });
 
-
+// creating tha swiper plugin object and setting
 $( document ).ready(function() {
   
   var swiper = new Swiper('.swiper-container', {
