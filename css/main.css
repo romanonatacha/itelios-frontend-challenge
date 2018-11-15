@@ -1,0 +1,224 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  padding-bottom: 50px; }
+  body .main {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    align-items: stretch;
+    justify-content: center; }
+    @media screen and (max-width: 1240px) {
+      body .main {
+        display: inline; } }
+    body .main__item {
+      display: inline-block; }
+      @media screen and (max-width: 1240px) {
+        body .main__item {
+          display: inline-grid; } }
+      body .main__item__title {
+        font-family: "Roboto Condensed", sans-serif;
+        font-weight: 700;
+        color: #646464;
+        text-align: left;
+        padding-left: 30px; }
+        @media screen and (max-width: 750px) {
+          body .main__item__title {
+            font-size: 50px; } }
+        @media screen and (max-width: 475px) {
+          body .main__item__title {
+            font-size: 58px; } }
+      body .main__item__product__image {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #e0e0e0;
+        padding: 20px;
+        text-align: center;
+        height: 400px;
+        color: #646464;
+        width: 1000px;
+        height: auto; }
+        @media screen and (min-width: 1239px) {
+          body .main__item__product__image {
+            max-width: 350px;
+            display: -ms-inline-grid; } }
+        @media screen and (max-width: 750px) {
+          body .main__item__product__image {
+            padding: 40px; } }
+        body .main__item__product__image img {
+          max-width: 200px;
+          height: auto;
+          align-self: center; }
+          @media screen and (max-width: 750px) {
+            body .main__item__product__image img {
+              max-width: 400px; } }
+        body .main__item__product__image__name {
+          display: -webkit-box;
+          height: 65px;
+          font-size: 18px;
+          line-height: 1.3;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          margin: 0 20px;
+          font-family: "Roboto", sans-serif; }
+          @media screen and (max-width: 750px) {
+            body .main__item__product__image__name {
+              height: 68px;
+              font-size: 26px; } }
+          @media screen and (max-width: 475px) {
+            body .main__item__product__image__name {
+              height: 106px;
+              font-size: 40px; } }
+        body .main__item__product__image__price {
+          font-family: "Roboto", sans-serif;
+          text-align: left;
+          margin: 5px 20px;
+          padding-top: 50px;
+          font-size: 18px; }
+          @media screen and (max-width: 750px) {
+            body .main__item__product__image__price {
+              font-size: 28px; } }
+          @media screen and (max-width: 475px) {
+            body .main__item__product__image__price {
+              font-size: 46px; } }
+        body .main__item__product__image__paymentConditions {
+          font-family: "Roboto", sans-serif;
+          margin: 0 20px;
+          text-align: left;
+          font-size: 16px; }
+          @media screen and (max-width: 750px) {
+            body .main__item__product__image__paymentConditions {
+              font-size: 26px; } }
+          @media screen and (max-width: 475px) {
+            body .main__item__product__image__paymentConditions {
+              font-size: 44px; } }
+        body .main__item__product__image:hover {
+          cursor: pointer;
+          background: white;
+          background: linear-gradient(180deg, white 0%, rgba(221, 221, 221, 0.473827) 100%); }
+    body .main__interess {
+      display: inline-block; }
+      @media screen and (max-width: 1240px) {
+        body .main__interess {
+          display: inline-grid; } }
+      body .main__interess__title {
+        font-family: "Roboto Condensed", sans-serif;
+        font-weight: 700;
+        color: #646464;
+        text-align: left;
+        padding-left: 30px; }
+        @media screen and (max-width: 750px) {
+          body .main__interess__title {
+            font-size: 50px; } }
+        @media screen and (max-width: 475px) {
+          body .main__interess__title {
+            font-size: 58px; } }
+      body .main__interess__list__image {
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #e0e0e0;
+        padding: 20px;
+        text-align: center;
+        height: 400px;
+        color: #646464;
+        position: relative;
+        height: auto; }
+        @media screen and (min-width: 1239px) {
+          body .main__interess__list__image {
+            max-width: 350px;
+            display: -ms-inline-grid; } }
+        @media screen and (max-width: 750px) {
+          body .main__interess__list__image {
+            padding: 40px; } }
+        body .main__interess__list__image img {
+          max-width: 200px;
+          height: auto;
+          align-self: center; }
+        body .main__interess__list__image__name {
+          display: -webkit-box;
+          height: 65px;
+          font-size: 18px;
+          line-height: 1.3;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          margin: 0 20px;
+          font-family: "Roboto", sans-serif; }
+          @media screen and (max-width: 750px) {
+            body .main__interess__list__image__name {
+              height: 68px;
+              font-size: 26px; } }
+          @media screen and (max-width: 475px) {
+            body .main__interess__list__image__name {
+              height: 106px;
+              font-size: 40px; } }
+        body .main__interess__list__image__price {
+          font-family: "Roboto", sans-serif;
+          text-align: left;
+          margin: 5px 20px;
+          padding-top: 50px;
+          font-size: 18px; }
+          @media screen and (max-width: 750px) {
+            body .main__interess__list__image__price {
+              font-size: 28px; } }
+          @media screen and (max-width: 475px) {
+            body .main__interess__list__image__price {
+              font-size: 46px; } }
+        body .main__interess__list__image__paymentConditions {
+          font-family: "Roboto", sans-serif;
+          margin: 0 20px;
+          text-align: left;
+          font-size: 16px; }
+          @media screen and (max-width: 750px) {
+            body .main__interess__list__image__paymentConditions {
+              font-size: 26px; } }
+          @media screen and (max-width: 475px) {
+            body .main__interess__list__image__paymentConditions {
+              font-size: 44px; } }
+        body .main__interess__list__image__btn {
+          display: none;
+          background-color: white;
+          border: 1px solid #e0e0e0;
+          font-family: "Roboto Condensed", sans-serif;
+          padding: 20px;
+          width: auto;
+          margin: 0 auto;
+          margin-top: 30px;
+          font-size: 22px;
+          bottom: 20px;
+          align-self: center;
+          color: #646464; }
+          @media screen and (max-width: 750px) {
+            body .main__interess__list__image__btn {
+              font-size: 38px; } }
+          @media screen and (max-width: 475px) {
+            body .main__interess__list__image__btn {
+              font-size: 50px; } }
+          @media screen and (max-width: 1239px) {
+            body .main__interess__list__image__btn {
+              display: block; } }
+          body .main__interess__list__image__btn i {
+            margin-left: 10px; }
+          body .main__interess__list__image__btn:hover, body .main__interess__list__image__btn:active {
+            cursor: pointer;
+            border-left: 15px solid orange;
+            padding-left: 6px; }
+          body .main__interess__list__image__btn:hover > i, body .main__interess__list__image__btn:active {
+            color: orange; }
+        body .main__interess__list__image:hover > button {
+          display: block; }
+        body .main__interess__list__image:hover {
+          height: auto;
+          cursor: pointer;
+          background: white;
+          background: linear-gradient(180deg, white 0%, rgba(221, 221, 221, 0.473827) 100%); }
+      body .main__interess__list .swiper-pagination {
+        position: initial; }
+  body .swiper-container {
+    width: 1000px;
+    height: auto; }
