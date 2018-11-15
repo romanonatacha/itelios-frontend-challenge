@@ -1,0 +1,58 @@
+// mixins
+
+@mixin title {
+    font-family: $font-condensed;
+    font-weight: $bold;
+    color: $light-gray;
+    text-align: left;
+    padding-left: 30px;
+
+    @media screen and (max-width: $max-medium) {
+        font-size: 50px;
+    }
+
+    @media screen and (max-width: $max-small) {
+        font-size: 58px;
+    }
+}
+
+@mixin block {
+    display: flex;
+    flex-direction: column;
+    border: $border;
+    padding: 20px;
+    text-align: center;
+    height: 400px;
+    color: $light-gray;
+
+    @media screen and (min-width: $min-large) {
+        max-width: 350px;
+        display: -ms-inline-grid;
+    }
+
+    @media screen and (max-width: $max-medium) {
+        padding: 40px;
+    }
+}
+
+@mixin product-name {
+    display: -webkit-box;
+    height: 65px;
+    font-size: 18px;
+    line-height: 1.3;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin: 0 20px;
+    font-family: $font-regular;
+    @media screen and (max-width: $max-medium) {
+        height: 68px;
+        font-size: 26px;
+    }
+
+    @media screen and (max-width: $max-small) {
+        height: 106px;
+        font-size: 40px;
+    }
+}
