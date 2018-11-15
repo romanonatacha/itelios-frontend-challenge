@@ -17,10 +17,10 @@ gulp.task('browser-sync', function() {
     });
 });
 
-gulp.task('default', ['webserver', 'scripts', 'styles'], function() {
+gulp.task('default', ['webserver', 'scripts', 'styles', 'copy-html'], function() {
     gulp.watch('js/*/*.js', ['scripts']);
     gulp.watch('sass/*/*.scss', ['styles']);
-
+    gulp.watch('index.html', ['copy-hmtl']);
 });
 
 gulp.task('scripts', function() {
@@ -33,4 +33,9 @@ gulp.task('styles', function() {
  gulp.src('sass/**/*.scss')
     .pipe(sass().on('error', sass.logError))
     .pipe(gulp.dest('dist/css'))
+});
+
+gulp.task('copy-html', function () {
+    gulp.src('index.html')
+        .pipe(gulp.dest('dist'));
 });
