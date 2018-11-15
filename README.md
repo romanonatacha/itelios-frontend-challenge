@@ -25,7 +25,7 @@ git clone https://github.com/romanonatacha/itelios-frontend-challenge.git
 
 ### Installing
 
-Inside the project directory run npm install
+Inside the project directory run
 
 ```
 npm install
@@ -39,7 +39,7 @@ Start the application
 npm start
 ```
 
-* With your server running, visit the site: `http://localhost:8000`.
+* With your server running, visit the site: [http://localhost:8000].
 
 ## Build With
 
